@@ -1,0 +1,3 @@
+class LocationApiService {
+  LocationApiService._();
+}
