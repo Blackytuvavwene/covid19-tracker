@@ -3,6 +3,7 @@ import 'package:covid_19_tracker/src/models/global_cases.dart';
 import 'package:covid_19_tracker/src/providers/covid_data.dart';
 import 'package:covid_19_tracker/src/views/home.dart';
 import 'package:flutter/material.dart';
+import 'package:layout/layout.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 
@@ -31,13 +32,15 @@ class MyApp extends StatelessWidget {
     );
     return Sizer(
       builder: (context, orientation, deviceType) {
-        return MaterialApp(
-          scaffoldMessengerKey: snackKey,
-          title: 'Flutter Demo',
-          theme: ThemeData(
-            primarySwatch: Colors.blue,
+        return Layout(
+          child: MaterialApp(
+            scaffoldMessengerKey: snackKey,
+            title: 'Flutter Demo',
+            theme: ThemeData(
+              primarySwatch: Colors.blue,
+            ),
+            home: const Home(),
           ),
-          home: const Home(),
         );
       },
     );
